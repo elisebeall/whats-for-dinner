@@ -1,7 +1,7 @@
 var sidesRecipes = ['Carrot Sticks', 'Broccoli', 'Peppers & Onions', 'Roti', 'Dumplings', 'Mashed Potatoes', 'Corn on the Cob', 'Salad', 'Chips & Salsa', 'Black Beans & Rice', 'Smashed Potatoes', 'Baked Potatoes', 'Grilled Asparagus'];
 var mainDishRecipes = ['Pesto, Tomato & Mozzarella Veggie Burger', 'BBQ Grilled Tofu', 'Channa Masala', 'Tofu Mutar Masala', 'Tofu Fried Rice', 'Green Curry with Tofu', 'Red Curry with Tofu', 'Spicy Peanut Tofu', 'Crispy Tofu with Honey Mustard', 'Nachos with Black Beans & Guacamole'];
 var dessertRecipes = ['Apple Pie', 'Lemon Meringue Pie', 'Black Forest Cake', 'Banana Bread', 'Peach Cobbler', 'Cheesecake', 'Funfetti Cake', 'Baklava', 'Flan', 'Macarons', 'Macaroons', 'Chocolate Cupcakes', 'Pavlova', 'Pumpkin Pie', 'Key Lime Pie', 'Tart Tatin', 'Croissants', 'Eclairs'];
-var favRecipes = ['pizza', 'chocolate', 'sushi'];
+var favRecipes = [];
 var currentRecipe = "";
 
 var viewFavsButton = document.querySelector('#view-favs-button');
@@ -72,9 +72,6 @@ function getRecipe() {
   }
 
   outputRecipe.innerText = `${currentRecipe}`;
-  // if (entireMealOption.checked) {
-  //   outputRecipe.innerText = `${mainDishRecipes[getRandomIndex(mainDishRecipes)]} with a side of ${sidesRecipes[getRandomIndex(sidesRecipes)]} and ${dessertRecipes[getRandomIndex(dessertRecipes)]} for dessert!`;
-  // }
 }
 
 function addFav() {
@@ -123,11 +120,6 @@ function showFavorites() {
 
     label.innerHTML = `${favRecipes[i]}`;
   }
-}
-
-function addListItem() {
-  // listItem = document.createElement('li');
-
 }
 
 function getRandomIndex(array) {
